@@ -80,6 +80,18 @@ public:
 		*this->num = n;
 		return *this;
 	}
+	operator int()
+	{
+		return *this->num;
+	}
+	operator double()
+	{
+		return *this->num;
+	}
+	void operator()()
+	{
+
+	}
 
 };
 ostream& operator<<(ostream&os, const number_ &num)
@@ -117,13 +129,18 @@ void main()
 {
 	setlocale(LC_ALL, "Rus");
 	number_ n;
-	number_ n2,n3;
-	
-	cin >> n>>n2;
-	/*n++;
-	n = n2 + n3;*/
-	n -= n2;
+	cin >> n;
+	n = n + 2;
 	cout << n;
+	
+
+	//number_ n2,n3;
+	//
+	//cin >> n>>n2;
+	///*n++;
+	//n = n2 + n3;*/
+	//n -= n2;
+	//cout << n;
 	
 	/*n = n2 + 5;
 	n = 5 + n3;*/
